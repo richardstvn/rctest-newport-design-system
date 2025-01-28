@@ -1,0 +1,69 @@
+.nds-b2b-discount-panel-wrapper {
+  background-color: $white-primary;
+  border: 1px solid rgb(196, 196, 196);
+
+  .nds-b2b-discount-panel {
+    .nds-b2b-discount-header {
+      border-bottom: 1px solid $b2b-header-gray;
+    }
+
+    .nds-b2b-section-tile {
+      background: $palette-gray-2;
+      box-shadow: 0px -1px 0px $palette-gray-8, 0px 1px 0px $palette-gray-8;
+    }
+
+    .nds-b2b-section-tile_title {
+      color: $b2b-section-title-black;
+      line-height: 1.5rem;
+    }
+
+    .nds-b2b-section-tile_pill {
+      background: $b2b-section-background-gray;
+      color: $b2b-pill-text-orange;
+      font-weight: 700;
+      font-size: 0.6rem;
+      line-height: 0.75rem;
+      width: fit-content;
+      padding: 0.2rem 1rem;
+      border-radius: 0.6rem;
+      border: 0.3px solid $b2b-pill-border-gray;
+    }
+
+    .nds-b2b-section-status-icon {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+
+    .nds-accordion__section {
+      position: relative;
+      margin: 0.5rem 0;
+    }
+
+    .nds-accordion__summary-heading {
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .nds-accordion__content {
+      max-height: 11rem;
+      overflow-y: auto;
+    }
+  }
+
+  .nds-b2b-promo-modal_title {
+    color: $b2b-section-title-black;
+  }
+
+  .nds-b2b-discount-modal_title {
+    color: $b2b-modal-title-gray;
+  }
+
+  .nds-b2b-discount-promo_header {
+    background: $b2b-config-promo-header-blue;
+    color: $white-primary;
+  }
+
+  .nds-b2b-discount-promo_description {
+    color: $b2b-section-description-black;
+  }
+}

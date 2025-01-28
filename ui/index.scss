@@ -9,18 +9,23 @@
 
 // Lightning Design System
 
-@import 'init';
+// @import 'init';
+@import 'init-omnibreeze';
 @import url(./nds-fonts.css);
 
 // Resets
-@import 'vendor/normalize';
+// @import 'vendor/normalize';
+@import 'omnibreeze/vendor/normalize';
 @include core($scoped: false, $globals: true);
 
 // Framework
 @import 'touch/index';
-@import 'components/index';
-@import 'components/omniscript/base/index';
-@import 'utilities/index';
+// @import 'components/index';
+@import 'omnibreeze/components/index';
+// @import 'components/omniscript/base/index';
+@import 'omnibreeze/components/omniscript/base/index';
+// @import 'utilities/index';
+@import 'omnibreeze/utilities/index';
 @import 'atoms/index';
 @import 'molecules/index';
 @import 'organisms/index';

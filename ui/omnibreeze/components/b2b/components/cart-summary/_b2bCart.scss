@@ -1,0 +1,73 @@
+.nds-b2b-cart-summary {
+    z-index: $z-index-default;
+
+    .nds-b2b-cart-price-text {
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .nds-b2b-quote-details-wrapper {
+      background: $palette-gray-3;
+      border: 1px solid $newport-border-gray;
+      border-radius: 3px 3px 0px 0px;
+    }
+}
+.nds-b2b-stretch-y {
+    height: 100%;
+}
+
+.nds-b2b-pipe {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 3rem;
+        background-color: $palette-cool-gray-5;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (max-width: 76rem) {
+            display: none
+        }
+    }
+}
+
+.nds-b2b-pipe-before {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 3rem;
+        background-color: $palette-cool-gray-5;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (max-width: 76rem) {
+            display: none
+        }
+    }
+}
+
+.nds-b2b-cart-actions {
+    @include b2b-desktop-view {
+        position: absolute;
+        right: $spacing-medium;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 20%;
+    }
+    .nds-b2b-m-left_medium {
+        margin-left: 0.4rem;
+    }
+}
+.nds-b2b-serviceability-modal {
+  .nds-b2b-modal-checkbox {
+    margin-right: 0.43rem;
+  }
+}

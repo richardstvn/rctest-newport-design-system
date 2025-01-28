@@ -52,3 +52,8 @@ coverage
 scripts/sfdc/staticresources/newport.resource
 
 dist
+
+# Local back up files
+*.bk
+/jwt
+scripts/sfdx

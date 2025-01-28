@@ -1,0 +1,48 @@
+.nds-b2b-hr {
+  margin: 0;
+  color: $palette-warm-gray-7;
+}
+.nds-b2b-configure-offer-container {
+  margin-bottom: 4rem;
+}
+
+.nds-b2b-error-message {
+  padding: 0.7rem 0 0.7rem 1rem;
+  background: $varden;
+  &.nds-b2b-root-message {
+    margin: 0.5rem 6vw 0 6vw;
+  }
+}
+
+.nds-b2b-grey-35 {
+  color: $grey-35;
+}
+
+.nds-b2b-newport-background-primary-blue {
+  color: $newport-background-primary-blue;
+}
+
+.b2b-config-offer {
+  padding-bottom: 2rem;
+  background: $white-smoke;
+  .nds-b2b-inline-block-relative {
+    display: inline-block;
+    position: relative;
+  }
+  .nds-b2b-popover-alignment {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    width: 50vw;
+    max-height: 25rem;
+    overflow-y: auto;
+  }
+  @media screen and (min-width: 48rem){
+    padding: 1rem 1rem 9rem;
+  }
+  @media screen and (min-width: 80rem) {
+    min-height: 70vh;
+    height:auto;
+    padding: 1rem 6rem 6rem 6rem;
+  }
+}

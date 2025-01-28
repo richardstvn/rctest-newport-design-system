@@ -1,0 +1,102 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin form-input-container {
+  background-color: $color-background-input;
+  width: 100%;
+  /* @if ($enable-simple-underlined-inputs) {
+border: 0;
+  border-bottom: $border-width-thin solid $color-border-input;
+  } @else {
+    border-radius: 0;
+    border: $border-width-thin solid $color-border-input;
+  } */
+  border: 1px solid $palette-cool-gray-12;
+  border-radius: $border-radius-medium;
+  color: $ob-color-gray12;
+}
+
+@mixin form-input-focus {
+  // outline: 0;
+  // border-color: $color-border-input-active;
+  background-color: $color-background-input-active;
+  // box-shadow: if ($enable-simple-underlined-inputs, none, $shadow-button-focus);
+  outline: solid 3px var(--ob-form-input-colour-focus, var(--ob-colour-focus));
+  outline-offset: 3px;
+}
+
+@mixin form-input-disabled {
+  background-color: $grey-95;
+  border-color: $color-border-input-disabled;
+  cursor: not-allowed;
+  caret-color: transparent;
+  outline: 0;
+  color: $newport-border-gray;
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+@mixin form-element-vertical-spacing {
+  margin-top: $spacing-small;
+
+  @include mq-small-min {
+    margin-top: $spacing-x-small;
+  }
+}
+
+@mixin form-element-required($element: null) {
+  @if $element != null {
+
+    > #{$element}:before {
+      content: '*';
+      color: $color-text-error;
+      position: absolute;
+      #{$left}: ($spacing-x-small * -1);
+    }
+  }
+}
+
+@mixin form-input-error($element: null) {
+  @if $element != null {
+
+    #{$element} {
+      background-color: $color-background-input;
+      border-color: $color-border-error;
+      background-clip: padding-box;
+      @if ($enable-simple-underlined-inputs) {
+        // box-shadow: none;
+        border-width: 2px;
+      } @else {
+        box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+        &:focus,
+        &:active {
+          box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
+        }
+      }
+    }
+  }
+}
+
+@mixin form-states {
+  @include form-input-container;
+  transition: border $duration-quickly linear, background-color $duration-quickly linear;
+
+  @if ($enable-simple-underlined-inputs == false) {
+    &:required {
+      box-shadow: none;
+    }
+  }
+
+  &:focus,
+  &:active {
+    @include form-input-focus;
+  }
+
+  &[disabled],
+  &.nds-is-disabled {
+    @include form-input-disabled;
+  }
+}
